@@ -1,0 +1,75 @@
+---
+permalink: index.html
+---
+{% extends "layouts/base.njk" %}
+
+{% set metaTitle = "Equal Day 2021 - Imaginer le Futur" %}
+{% set metaDescription = "Equal Day 2021 - Imaginer le Futur" %}
+{% set metaImage = site.metaImage %}
+
+{% block content %}
+
+  <div class="c-pagesection">
+    <div class="l-container">
+
+      <div class="l-programme">
+        <div class="l-programme__media">
+
+          <img class="o-fluidimage" src="/assets/img/programme-800.jpg" alt="Flagey au printemps">
+
+        </div>
+        <div class="l-programme__content">
+
+          <h2>Programme</h2>
+          <p>Cette année, EQUAL fête ses 6 ans d’existence et le départ à la retraite d'Eric Gillet. Deux raisons, au moins, de se réjouir avec vous lors de cet EQUAL DAY 2021.</p>
+          <p>Profitons de ce moment convivial et festif pour inventer le futur et papoter autour d’un bon repas.</p>
+
+          <ul class="c-listevents">
+            <li>
+              <article class="c-event">
+                <h3 class="c-event__title"><time>19h00</time> - <time>19h45</time>: <span>Accueil &amp; Apéritif</span></h3>
+                <p class="c-event__content">Nous serons ravis de voir revoir et de prendre un verre ensemble après ces longs mois que nous venons de vivre.</p>
+              </article>
+            </li>
+            <li>
+              <article class="c-event">
+                <h3 class="c-event__title"><time>19h45</time> - <time>20h45</time>: <span>Inventer le Futur</span></h3>
+                <p class="c-event__content">Séance de "quick Speeches" par différents intervenants sous la houlette de Christophe Dubois.</p>
+              </article>
+            </li>
+            <li>
+              <article class="c-event">
+                <h3 class="c-event__title"><time>20h45</time> - <time>23h00</time>: <span>Diner et animation musicale</span></h3>
+                <p class="c-event__content">Diner préparé par "Brut Food" et animation musicale assurée par le groupe "Qui Swing-je".</p>
+              </article>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="c-pagesection">
+    <div class="l-container">
+
+      <h2>Intervenants</h2>
+
+      {% set speakers = collections.speakers %}
+      {% for speaker in speakers %}
+        {% if loop.first %}<ul class="c-listspeakers">{% endif %}
+          <li>
+            <article class="c-speaker">
+              <a class="c-speaker__link" href="#">
+                <img class="c-speaker__image  o-fluidimage" src="/assets/img/speakers/{{ speaker.data.image }}" alt="{{ speaker.data.name }} {{ speaker.data.surname }}">
+                <h3 class="c-speaker__name">{{ speaker.data.name }} {{ speaker.data.surname }}</h3>
+                <p class="c-speaker__function">{{ speaker.data.function }}</p>
+              </a>
+            </article>
+          </li>
+        {% if loop.last %}</ul>{% endif %}
+      {% endfor %}
+
+    </div>
+  </div>
+{% endblock %}

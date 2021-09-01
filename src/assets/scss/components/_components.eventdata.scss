@@ -1,0 +1,35 @@
+// ----------------------------------
+// =event data
+// ----------------------------------
+
+.c-eventdata {
+  padding-bottom: calc(30 / 16 * 1rem);
+  margin-bottom: calc(30 / 16 * 1rem);
+}
+
+.c-eventdata__date {
+  font-weight: 400;
+  font-size: calc(20 / 16 * 1rem);
+  font-family: var(--fontstack-alt);
+  font-style: italic;
+  color: var(--color-gray4);
+  margin-bottom: calc(6 / 16 * 1rem);
+}
+
+.c-eventdata__title {
+  font-weight: 400;
+  font-size: calc(36 / 16 * 1rem);
+  line-height: calc(42 / 36);
+  font-family: var(--fontstack-main);
+  color: var(--color-brand2);
+  margin-bottom: calc(6 / 16 * 1rem);
+}
+
+.c-eventdata__location {
+  font-weight: 400;
+  font-size: calc(20 / 16 * 1rem);
+  font-family: var(--fontstack-alt);
+  font-style: italic;
+  color: var(--color-gray6);
+  margin-bottom: 0;
+}

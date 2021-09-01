@@ -1,0 +1,13 @@
+// ----------------------------------
+// =button
+// ----------------------------------
+
+.c-button {
+  display: inline-block;
+
+  line-height: 1;
+  text-align: center;
+  padding: calc(12 / 16 * 1rem) calc(24 / 16 * 1rem);
+  background-color: red;
+  cursor: pointer;
+}

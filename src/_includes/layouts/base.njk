@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ metaTitle ~ " - " if metaTitle }}{{ site.title }}</title>
+  <meta name="description" content="{{ metaDescription if metaDescription else site.description }}">
+
+  {# Open Graph + Twitter #}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="{{ site.authorTwitter }}">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:title" content="{{ metaTitle ~ ' - ' if metaTitle }}{{ site.title }}">
+  <meta property="og:description" content="{{ metaDescription if metaDescription else site.description }}">
+  <meta property="og:image" content="{{ metaImage if metaImage else site.metaImage }}">
+
+  {# Apple icon (minimal) #}
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  {# Preload fonts #}
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="/assets/fonts/source-sans-pro-300.woff2">
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="/assets/fonts/source-sans-pro-400.woff2">
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="/assets/fonts/source-sans-pro-600.woff2">
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="/assets/fonts/source-serif-pro-400.woff2">
+  <link rel="preload" as="font" crossorigin type="font/woff2" href="/assets/fonts/source-serif-pro-400-italic.woff2">
+
+  {# CSS #}
+  <link rel="stylesheet" href="/assets/css/main.css?ref={{ site.buildDate | date('X') }}">
+</head>
+<body>
+  {% include "partials/siteheader.njk" %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  {% include "partials/sitefooter.njk" %}
+</body>
+</html>

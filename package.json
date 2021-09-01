@@ -1,0 +1,46 @@
+{
+  "name": "equal-day-2021",
+  "version": "1.0.0",
+  "description": "Equal Day 2021 - Event",
+  "author": "Jérôme Coupé",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jeromecoupe/equalday-2021.git"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not IE <= 11"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "styles:dev": "sass --source-map --embed-source-map --source-map-urls=absolute ./src/assets/scss/main.scss dist/assets/css/main.css",
+    "styles:prod": "sass --no-source-map --style=compressed src/assets/scss/main.scss dist/assets/css/main.css",
+    "poststyles:prod": "postcss dist/assets/css/main.css --replace --no-map --use autoprefixer cssnano",
+    "scripts:prod": "esbuild ./src/assets/js/main.js --target=es6 --bundle --minify --outfile=./dist/assets/js/main.bundle.js",
+    "scripts:dev": "esbuild ./src/assets/js/main.js --target=es6 --bundle --outfile=./dist/assets/js/main.bundle.js",
+    "server": "browser-sync start --server \"dist\" --files \"dist\" --no-open",
+    "eleventy": "npx @11ty/eleventy --quiet",
+    "watch:eleventy": "npx @11ty/eleventy --watch --quiet",
+    "watch:scripts": "onchange \"src/assets/js/**/*\" -- npm run scripts:dev",
+    "watch:styles": "onchange \"src/assets/scss/**/*\" -- npm run styles:dev",
+    "build": "npm-run-all clean --parallel styles:prod scripts:prod eleventy",
+    "watch": "npm-run-all --parallel server watch:*",
+    "dev": "npm run watch"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "autoprefixer": "^10.3.3",
+    "browser-sync": "^2.27.5",
+    "cssnano": "^5.0.8",
+    "esbuild": "^0.12.24",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.38.2"
+  }
+}

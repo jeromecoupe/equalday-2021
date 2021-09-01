@@ -1,0 +1,16 @@
+// ----------------------------------
+// =site header
+// ----------------------------------
+
+.c-siteheader {
+  text-align: center;
+  padding-top: calc(60 / 16 * 1rem);
+  padding-bottom: calc(60 / 16 * 1rem);
+}
+
+.c-siteheader__quote {
+  font-weight: 400;
+  font-size: calc(18 / 16 * 1rem);
+  line-height: calc(30 / 18);
+  color: var(--color-gray4);
+}
