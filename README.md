@@ -1,7 +1,6 @@
-# Eleventy Starter kit
+# Equal Day 2021
 
-Starter kit for Eleventy projects.
-Using NPM scripts and Webpack as build tools.
+Using NPM scripts and esbuild as build tools.
 
 ## Install
 
@@ -9,11 +8,3 @@ Using NPM scripts and Webpack as build tools.
 - check that Node is installed
 - run `npm install`
 - run `npm run build` then `npm run watch`
-
-## Features
-
-- sound project architecture
-- basic filters
-- sample content for a blogposts collection
-- sample date macro
-- sample pagination code
