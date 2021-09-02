@@ -1,16 +1,15 @@
 /**
- * Format dates using moment.js
+ * Format a date
  *
- * @param {Date} date - JS date
- * @param {String} format - Moment format string
- * @param {String} locale - Locale code
- * @return {String} formatted date
+ * @param {String} date - string Date
+ * @param {String} format - date format (Luxon)
+ * @param {String} locale - locale
+ * @returns {String} formatted date
  */
 
-const moment = require("moment");
+const { DateTime } = require("luxon");
 
-module.exports = function (date, format, locale) {
-  locale = locale ? locale : "en";
-  moment.locale(locale);
-  return moment(date).format(format);
+module.exports = function (date, format, locale = "en") {
+  date = new Date(date);
+  return DateTime.fromJSDate(date).setLocale(locale).toFormat(format);
 };

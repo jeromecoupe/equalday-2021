@@ -1,14 +1,14 @@
 // ----------------------------------
-// =event data
+// =header data
 // ----------------------------------
 
-.c-eventdata {
+.c-headerdata {
   position: relative;
   padding-bottom: calc(30 / 16 * 1rem);
   margin-bottom: calc(30 / 16 * 1rem);
 }
 
-.c-eventdata::after {
+.c-headerdata::after {
   content: "";
   height: 1px;
   width: 60px;
@@ -19,7 +19,7 @@
   transform: translate3d(-50%, 0, 0);
 }
 
-.c-eventdata__date {
+.c-headerdata__date {
   font-weight: 400;
   font-size: calc(20 / 16 * 1rem);
   font-family: var(--fontstack-alt);
@@ -36,7 +36,7 @@
   }
 }
 
-.c-eventdata__title {
+.c-headerdata__title {
   font-weight: 400;
   font-size: calc(36 / 16 * 1rem);
   line-height: 1.2;
@@ -53,7 +53,7 @@
   }
 }
 
-.c-eventdata__location {
+.c-headerdata__location {
   font-weight: 400;
   font-size: calc(20 / 16 * 1rem);
   font-family: var(--fontstack-alt);

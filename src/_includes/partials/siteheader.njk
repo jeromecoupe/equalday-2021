@@ -3,16 +3,16 @@
     <p class="c-siteheader__logo">{% include "svg/logo.svg" %}</p>
 
     <div class="c-siteheader__info">
-      <div class="c-eventdata">
-        <p class="c-eventdata__date"><time datetime="2021-09-16">16 Septembre 2021</time></p>
-        <h1 class="c-eventdata__title">Inventer le Futur</h1>
-        <p class="c-eventdata__location">Bruxelles - Flagey</p>
+      <div class="c-headerdata">
+        <p class="c-headerdata__date"><time datetime="{{ event.date | date('yyyy-LL-dd') }}">{{ event.date | date('DDD', 'fr') }}</time></p>
+        <h1 class="c-headerdata__title">{{ event.title }}</h1>
+        <p class="c-headerdata__location">{{ event.location }}</p>
       </div>
     </div>
 
     <div class="c-siteheader__quote">
-      <div class="c-eventquote">
-        <p>Comment s’imaginer un avenir, lorsqu’il ne repose plus sur l’évidence du progrès? Comment tout simplement se figurer un futur, entre déni des enjeux et crainte de l’effondrement?</p>
+      <div class="c-headerquote">
+        <p>{{ event.quote }}</p>
       </div>
     </div>
 

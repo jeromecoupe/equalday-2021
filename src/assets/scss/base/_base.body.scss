@@ -13,9 +13,12 @@ body {
   background-position: 50% -60px;
   background-size: 120% auto;
 
+  @include breakpoint(large) {
+    font-size: calc(18 / 16 * 1rem);
+  }
+
   @include breakpoint(xlarge) {
     background-position: 50% -150px;
     background-size: auto;
-    font-size: calc(18 / 16 * 1rem);
   }
 }

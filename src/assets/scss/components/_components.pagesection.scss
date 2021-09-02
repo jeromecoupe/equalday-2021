@@ -7,13 +7,13 @@
   padding-bottom: calc(30 / 16 * 1rem);
 
   @include breakpoint(medium) {
-    padding-top: calc(45 / 16 * 1rem);
-    padding-bottom: calc(45 / 16 * 1rem);
+    padding-top: calc(48 / 16 * 1rem);
+    padding-bottom: calc(48 / 16 * 1rem);
   }
 
   @include breakpoint(large) {
-    padding-top: calc(60 / 16 * 1rem);
-    padding-bottom: calc(60 / 16 * 1rem);
+    padding-top: calc(66 / 16 * 1rem);
+    padding-bottom: calc(66 / 16 * 1rem);
   }
 
   @include breakpoint(xlarge) {
