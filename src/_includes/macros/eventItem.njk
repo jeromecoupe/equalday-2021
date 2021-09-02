@@ -1,4 +1,4 @@
-{% macro eventItem(title, content, sartDate, endDate) -%}
+{% macro eventItem(title, content, startDate, endDate) -%}
   <article class="c-event">
     <h3 class="c-event__title"><time datetime="{{ startDate }}">{{ startDate | date("T") }}</time> - <time datetime="{{ endDate }}">{{ endDate | date("T") }}</time>: <span>{{ title }}</span></h3>
     <div class="c-event__content">{{ content }}</div>
