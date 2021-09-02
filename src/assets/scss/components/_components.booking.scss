@@ -1,0 +1,72 @@
+// ----------------------------------
+// =booking
+// ----------------------------------
+
+.c-booking {
+  margin: 0;
+}
+
+.c-booking__cta {
+  display: block;
+
+  @include breakpoint(small) {
+    background-color: var(--color-brand2);
+    padding: calc(6 / 12 * 1rem);
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+  }
+}
+
+.c-booking__intro {
+  display: block;
+  font-size: calc(14 / 16 * 1rem);
+  line-height: calc(18 / 14);
+  margin-bottom: calc(12 / 16 * 1rem);
+
+  @include breakpoint(small) {
+    font-size: 1rem;
+    line-height: calc(24 / 16);
+    padding-right: calc(24 / 16 * 1rem);
+    padding-left: calc(24 / 16 * 1rem);
+    margin-bottom: 0;
+    color: var(--color-white);
+  }
+}
+
+.c-booking__link {
+  display: block;
+
+  padding: calc(14 / 16 * 1rem) calc(24 / 16 * 1rem);
+  border-radius: 30px;
+  background-color: var(--color-brand2);
+  color: var(--color-white);
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-brand1);
+  }
+
+  @include breakpoint(small) {
+    background-color: var(--color-white);
+    color: var(--color-gray3);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-brand4);
+    }
+  }
+}
+
+.c-booking__legal {
+  max-width: 400px;
+  margin: 0 auto;
+}

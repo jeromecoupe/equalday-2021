@@ -12,13 +12,15 @@ permalink: index.html
   <div class="c-pagesection">
     <div class="l-container">
 
-      <div class="l-programme">
-        <div class="l-programme__media">
+      <div class="c-programme">
+        <div class="c-programme__media">
 
-          <img class="o-fluidimage" src="/assets/img/programme-800.jpg" alt="Flagey au printemps">
+          <p class="c-programme__image">
+            <img class="o-fluidimage" src="/assets/img/programme-800.jpg" alt="Flagey au printemps">
+          </p>
 
         </div>
-        <div class="l-programme__content">
+        <div class="c-programme__content">
 
           <h2>Programme</h2>
           <p>Cette année, EQUAL fête ses 6 ans d’existence et le départ à la retraite d'Eric Gillet. Deux raisons, au moins, de se réjouir avec vous lors de cet EQUAL DAY 2021.</p>
@@ -57,11 +59,11 @@ permalink: index.html
 
       {% set speakers = collections.speakers %}
       {% for speaker in speakers %}
-        {% if loop.first %}<ul class="c-listspeakers">{% endif %}
+        {% if loop.first %}<ul class="l-grid  l-grid--gap  l-grid--2cols@small   l-grid--3cols@medium  l-grid--4cols@large">{% endif %}
           <li>
             <article class="c-speaker">
               <a class="c-speaker__link" href="#">
-                <img class="c-speaker__image  o-fluidimage" src="/assets/img/speakers/{{ speaker.data.image }}" alt="{{ speaker.data.name }} {{ speaker.data.surname }}">
+                <p class="c-speaker__image"><img class="o-fluidimage" src="/assets/img/speakers/{{ speaker.data.image }}" alt="{{ speaker.data.name }} {{ speaker.data.surname }}"></p>
                 <h3 class="c-speaker__name">{{ speaker.data.name }} {{ speaker.data.surname }}</h3>
                 <p class="c-speaker__function">{{ speaker.data.function }}</p>
               </a>

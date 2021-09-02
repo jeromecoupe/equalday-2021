@@ -1,0 +1,74 @@
+// --------------------------------
+// =grid
+// --------------------------------
+
+// --------------------------------
+// =settings
+// --------------------------------
+
+$breakpoints-map: (
+  "small": "all and (min-width: 500px)",
+  "medium": "all and (min-width: 760px)",
+  "large": "all and (min-width: 1024px)",
+  "xlarge": "all and (min-width: 1200px)",
+) !default;
+
+// --------------------------------
+// =base classes
+// --------------------------------
+
+.l-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* columns */
+.l-grid--full {
+  grid-template-columns: 1fr;
+}
+
+.l-grid--2cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.l-grid--3cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.l-grid--4cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* gaps */
+.l-grid--gap {
+  gap: calc(30 / 16 * 1rem);
+}
+
+// --------------------------------
+// =rwd classes
+// --------------------------------
+
+@each $key, $value in $breakpoints-map {
+  $query: $value;
+  @media #{$query} {
+    .l-grid--full\@#{$key} {
+      grid-template-columns: 1fr;
+    }
+
+    .l-grid--2cols\@#{$key} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .l-grid--3cols\@#{$key} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .l-grid--4cols\@#{$key} {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
