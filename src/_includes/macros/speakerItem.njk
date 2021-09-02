@@ -4,7 +4,15 @@
 
   <article class="c-speaker">
     <a class="c-speaker__link" href="{{- url -}}">
-      <p class="c-speaker__image"><img class="o-fluidimage" src="{{ imageUrl }}" alt="{{ name }} {{ surname }}"></p>
+      <p class="c-speaker__image">
+        <img src="{{ imageUrl }}"
+             class="o-fluidimage"
+             loading="lazy"
+             decoding="async"
+             width="600"
+             height="600"
+             alt="{{ name }} {{ surname }}">
+      </p>
       <h3 class="c-speaker__name">{{ name }} {{ surname }}</h3>
       <p class="c-speaker__function">{{ function }}</p>
     </a>

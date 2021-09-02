@@ -24,6 +24,10 @@ permalink: index.html
                  sizes="(min-width: 1024px) 50vw,
                         100vw"
                  class="o-fluidimage"
+                 loading="lazy"
+                 decoding="async"
+                 width="800"
+                 height="1066"
                  alt="Flagey au printemps">
           </p>
 
@@ -67,7 +71,7 @@ permalink: index.html
 
       {% set speakers = collections.speakers %}
       {% for speaker in speakers %}
-        {% if loop.first %}<ul class="l-grid  l-grid--gap  l-grid--2cols@small   l-grid--3cols@medium  l-grid--4cols@large">{% endif %}
+        {% if loop.first %}<ul class="l-grid  l-grid--gap  l-grid--2cols@small  l-grid--3cols@medium  l-grid--4cols@large">{% endif %}
           <li>
             {{ speakerItem(
               url = speaker.data.url,
