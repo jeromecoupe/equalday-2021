@@ -7,8 +7,14 @@ body {
   min-height: 100vh;
   // used for speakers animations
   overflow-x: hidden;
+  background-image: url(../img/questionmark.svg);
+  background-repeat: no-repeat;
+  background-position: 50% -60px;
+  background-size: 120% auto;
 
   @include breakpoint(xlarge) {
+    background-position: 50% -150px;
+    background-size: auto;
     font-size: calc(18 / 16 * 1rem);
   }
 }

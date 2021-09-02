@@ -17,6 +17,14 @@
 
 .c-h1 {
   font-size: calc(36 / 16 * 1rem);
+
+  @include breakpoint(medium) {
+    font-size: calc(41 / 16 * 1rem);
+  }
+
+  @include breakpoint(large) {
+    font-size: calc(46 / 16 * 1rem);
+  }
 }
 
 .c-h2 {
@@ -27,7 +35,7 @@
   }
 
   @include breakpoint(large) {
-    font-size: calc(36 / 16 * 1rem);
+    font-size: calc(41 / 16 * 1rem);
   }
 }
 

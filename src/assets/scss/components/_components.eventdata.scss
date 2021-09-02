@@ -26,6 +26,14 @@
   font-style: italic;
   color: var(--color-gray4);
   margin-bottom: calc(6 / 16 * 1rem);
+
+  @include breakpoint(medium) {
+    font-size: calc(23 / 16 * 1rem);
+  }
+
+  @include breakpoint(large) {
+    font-size: calc(29 / 16 * 1rem);
+  }
 }
 
 .c-eventdata__title {
@@ -52,4 +60,12 @@
   font-style: italic;
   color: var(--color-gray6);
   margin-bottom: 0;
+
+  @include breakpoint(medium) {
+    font-size: calc(23 / 16 * 1rem);
+  }
+
+  @include breakpoint(large) {
+    font-size: calc(29 / 16 * 1rem);
+  }
 }
