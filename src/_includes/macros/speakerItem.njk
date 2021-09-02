@@ -1,3 +1,12 @@
-{% macro htmldate(date) -%}
-  <time datetime="{{- date | date('YYYY-MM-DD') -}}">{{- date|date("MMMM Do, Y") -}}</time>
+{% macro speakerItem(url, name, surname, function, image) -%}
+
+  {% set imageUrl = "/assets/img/speakers/" ~ image %}
+
+  <article class="c-speaker">
+    <a class="c-speaker__link" href="{{- url -}}">
+      <p class="c-speaker__image"><img class="o-fluidimage" src="{{ imageUrl }}" alt="{{ name }} {{ surname }}"></p>
+      <h3 class="c-speaker__name">{{ name }} {{ surname }}</h3>
+      <p class="c-speaker__function">{{ function }}</p>
+    </a>
+  </article>
 {%- endmacro %}

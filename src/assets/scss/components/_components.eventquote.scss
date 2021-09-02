@@ -6,6 +6,7 @@
   font-weight: 400;
   font-size: calc(18 / 16 * 1rem);
   color: var(--color-gray5);
+  margin-bottom: calc(30 / 16 * 1rem);
 
   @include breakpoint(medium) {
     font-size: calc(20 / 16 * 1rem);

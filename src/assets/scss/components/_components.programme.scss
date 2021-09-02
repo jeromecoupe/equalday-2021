@@ -8,7 +8,7 @@
   grid-template-areas:
     "media"
     "content";
-  gap: calc(30 / 16 * 1rem);
+  gap: calc(48 / 16 * 1rem);
 
   @include breakpoint(medium) {
     grid-template-columns: repeat(2, 1fr);

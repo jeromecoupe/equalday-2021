@@ -7,6 +7,8 @@ permalink: index.html
 {% set metaDescription = "Equal Day 2021 - Imaginer le Futur" %}
 {% set metaImage = site.metaImage %}
 
+{% from "macros/speakerItem.njk" import speakerItem %}
+
 {% block content %}
 
   <div class="c-pagesection">
@@ -42,7 +44,7 @@ permalink: index.html
             <li>
               <article class="c-event">
                 <h3 class="c-event__title"><time>20h45</time> - <time>23h00</time>: <span>Diner et animation musicale</span></h3>
-                <p class="c-event__content">Diner préparé par "Brut Food" et animation musicale assurée par le groupe "Qui Swing-je".</p>
+                <p class="c-event__content">Diner préparé par <a href="https://brutfood.be/">Brut Food</a>. Animation musicale assurée par le groupe "Qui Swing-je" jusqu'en fin de soirée.</p>
               </article>
             </li>
           </ul>
@@ -61,13 +63,13 @@ permalink: index.html
       {% for speaker in speakers %}
         {% if loop.first %}<ul class="l-grid  l-grid--gap  l-grid--2cols@small   l-grid--3cols@medium  l-grid--4cols@large">{% endif %}
           <li>
-            <article class="c-speaker">
-              <a class="c-speaker__link" href="#">
-                <p class="c-speaker__image"><img class="o-fluidimage" src="/assets/img/speakers/{{ speaker.data.image }}" alt="{{ speaker.data.name }} {{ speaker.data.surname }}"></p>
-                <h3 class="c-speaker__name">{{ speaker.data.name }} {{ speaker.data.surname }}</h3>
-                <p class="c-speaker__function">{{ speaker.data.function }}</p>
-              </a>
-            </article>
+            {{ speakerItem(
+              url = speaker.data.url,
+              name = speaker.data.name,
+              surname = speaker.data.surname,
+              function = speaker.data.function,
+              image = speaker.data.image
+            ) }}
           </li>
         {% if loop.last %}</ul>{% endif %}
       {% endfor %}
