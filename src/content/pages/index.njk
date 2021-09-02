@@ -3,8 +3,7 @@ permalink: index.html
 ---
 {% extends "layouts/base.njk" %}
 
-{% set metaTitle = "Equal Day 2021 - Imaginer le Futur" %}
-{% set metaDescription = "Equal Day 2021 - Imaginer le Futur" %}
+{% set metaTitle = "Accueil" %}
 {% set metaImage = site.metaImage %}
 
 {% from "macros/speakerItem.njk" import speakerItem %}
@@ -18,7 +17,14 @@ permalink: index.html
         <div class="c-programme__media">
 
           <p class="c-programme__image">
-            <img class="o-fluidimage" src="/assets/img/programme-800.jpg" alt="Flagey au printemps">
+            <img src="/assets/img/programme-400.jpg"
+                 srcset="/assets/img/programme-400.jpg 400w,
+                         /assets/img/programme-600.jpg 600w,
+                         /assets/img/programme-800.jpg 800w"
+                 sizes="(min-width: 1024px) 50vw,
+                        100vw"
+                 class="o-fluidimage"
+                 alt="Flagey au printemps">
           </p>
 
         </div>
