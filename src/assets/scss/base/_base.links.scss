@@ -1,0 +1,10 @@
+a {
+  color: var(--color-brand2);
+  text-decoration: underline;
+  text-underline-offset: calc(3 / 16 * 1rem);
+  text-decoration-color: var(--color-gray8);
+
+  &:hover {
+    text-decoration-color: var(--color-brand2);
+  }
+}

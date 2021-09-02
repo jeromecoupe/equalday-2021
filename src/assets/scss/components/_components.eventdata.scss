@@ -31,10 +31,18 @@
 .c-eventdata__title {
   font-weight: 400;
   font-size: calc(36 / 16 * 1rem);
-  line-height: calc(42 / 36);
+  line-height: 1.2;
   font-family: var(--fontstack-main);
   color: var(--color-brand2);
   margin-bottom: calc(6 / 16 * 1rem);
+
+  @include breakpoint(medium) {
+    font-size: calc(58 / 16 * 1rem);
+  }
+
+  @include breakpoint(large) {
+    font-size: calc(66 / 16 * 1rem);
+  }
 }
 
 .c-eventdata__location {

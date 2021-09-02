@@ -5,6 +5,13 @@
 .c-eventquote {
   font-weight: 400;
   font-size: calc(18 / 16 * 1rem);
-  line-height: calc(30 / 18);
   color: var(--color-gray5);
+
+  @include breakpoint(medium) {
+    font-size: calc(20 / 16 * 1rem);
+  }
+
+  @include breakpoint(large) {
+    font-size: calc(24 / 16 * 1rem);
+  }
 }

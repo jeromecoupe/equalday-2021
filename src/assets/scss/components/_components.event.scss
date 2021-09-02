@@ -1,0 +1,24 @@
+// ----------------------------------
+// =event
+// ----------------------------------
+
+.c-event {
+  margin: 0;
+}
+
+.c-event__title {
+  font-weight: 600;
+  font-size: calc(18 / 16 * 1rem);
+  margin-bottom: calc(6 / 16 * 1rem);
+  color: var(--color-brand2);
+
+  & > span {
+    color: var(--color-gray2);
+  }
+}
+
+.c-event__content {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--color-gray5);
+}

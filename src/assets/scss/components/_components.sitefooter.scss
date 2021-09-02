@@ -3,10 +3,13 @@
 // ----------------------------------
 
 .c-sitefooter {
+  margin-top: 1rem;
+  border-top: 1px solid var(--color-gray8);
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 .c-sitefooter__copyright {
+  text-align: center;
   margin-bottom: 0;
 }

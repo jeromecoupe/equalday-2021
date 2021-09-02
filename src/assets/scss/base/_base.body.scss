@@ -5,4 +5,10 @@ body {
   background-color: var(--color-white);
   color: var(--color-black);
   min-height: 100vh;
+  // used for speakers animations
+  overflow-x: hidden;
+
+  @include breakpoint(xlarge) {
+    font-size: calc(18 / 16 * 1rem);
+  }
 }
