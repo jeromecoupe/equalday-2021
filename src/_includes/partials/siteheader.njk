@@ -4,7 +4,7 @@
 
     <div class="c-siteheader__info">
       <div class="c-headerdata">
-        <p class="c-headerdata__date"><time datetime="{{ event.date | date('yyyy-LL-dd') }}">{{ event.date | date('DDD', 'fr') }}</time></p>
+        <p class="c-headerdata__date"><time datetime="{{ event.date | date('yyyy-MM-dd') }}">{{ event.date | date('DDD', 'fr') }}</time></p>
         <h1 class="c-headerdata__title">{{ event.title }}</h1>
         <p class="c-headerdata__location">{{ event.location }}</p>
       </div>

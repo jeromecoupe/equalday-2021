@@ -5,6 +5,11 @@ module.exports = function (eleventyConfig) {
     require("./src/_11ty/collections/speakers.js")
   );
 
+  eleventyConfig.addCollection(
+    "events",
+    require("./src/_11ty/collections/events.js")
+  );
+
   // filters
   eleventyConfig.addFilter("date", require("./src/_11ty/filters/date.js"));
   eleventyConfig.addFilter(
